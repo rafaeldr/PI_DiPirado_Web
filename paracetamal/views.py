@@ -33,12 +33,12 @@ def consulta_interacoes(request):
                 return render(request, 'paracetamal/consulta_interacoes.html', { 'resultado_interacao':resultado_interacao, 'componente_1':componente_1, 'componente_2':componente_2})
 
             else:
-                cursor.execute("CALL VerificaInteracao("+'"'+componente_1+'"'+','+'"'+componente_2+'")')
+                #cursor.execute("CALL VerificaInteracao("+'"'+componente_1+'"'+','+'"'+componente_2+'")')
                 results = cursor.fetchall()
 
                 print(results)
                 
-                if results != ():
+                if results != []:
                     resultado_interacao = '1'
                 print(resultado_interacao)
                 return render(request, 'paracetamal/consulta_interacoes.html', { 'resultado_interacao':resultado_interacao, 'componente_1':componente_1, 'componente_2':componente_2})

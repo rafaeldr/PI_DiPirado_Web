@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'paracetamal_teste_2',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'paracetamal_kegg',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'pass',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -117,7 +117,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
